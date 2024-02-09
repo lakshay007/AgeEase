@@ -32,9 +32,7 @@ window.location.href = '/homepage'
         useralready = 1;
     }
 
-// const responsee = await fetch(API_URL+"products");
-//     let  dataaa = await responsee.json();
-//     console.log(dataaa);
+  console.log(dataaa);
 }
 let handlelogin = async()=>{
     const data = {
