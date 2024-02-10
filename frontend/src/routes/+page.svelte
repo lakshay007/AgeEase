@@ -82,8 +82,8 @@ let handlelogin = async()=>{
     {/if}
     {#if passwordauth == -1}
     <p>wrong password, please try again</p>
-    {/if}
-    {#if passwordauth == -2}
+   
+    {:else if passwordauth == -2}
     <p>user is not registered, please sign up</p>
     {/if}
 </div>
