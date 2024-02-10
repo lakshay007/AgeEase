@@ -1,4 +1,5 @@
 <script>
+   import Nav from '$lib/Components/nav.svelte'
       import { onMount } from 'svelte';
       let username;
       let notfound = 0;
@@ -21,9 +22,9 @@
   </script>
   <main>
    {#if notfound == 0}
- 
+ <Nav>
+ </Nav>
   <h1>welcome {username}</h1>
-  <button on:click={handlesignout} >sign out</button>
   {:else}
   <h1>uh oh, page not found!</h1>
   {/if}
