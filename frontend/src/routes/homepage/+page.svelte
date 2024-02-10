@@ -4,10 +4,6 @@
       let username;
       let notfound = 0;
       onMount(async () => {
-  // 	     obj = document.cookie
-  //   .split("; ")
-  //   .find((row) => row.startsWith("name="))
-  //   ?.split("=")[1];
    username = localStorage.getItem("username");
    if(username == null){
       notfound = 1;

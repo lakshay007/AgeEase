@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const mongoose = require("mongoose");
 const UserData = require('./userSchema');
+const Coms = require('./postSchema');
 app.use(express.json());
 app.use(cors());
 mongoose.connect('mongodb+srv://lakshay:kaalajaadu123@istehackathon.wpmeatj.mongodb.net/?retryWrites=true&w=majority')
@@ -23,6 +24,15 @@ app.post('/UserData', async(req,res)=>{
 })
 app.get('/UserData/:id', async(req,res)=>{
     const data = await UserData.findOne({username: req.params.id})
+    res.status(200).json(data);
+})
+app.post('/communities/', async(req,res)=>{
+    console.log(res.body);
+    const data = await Coms.create(req.body)
+    res.status(200).json(data);
+})
+app.get('/communities/:id', async(req,res)=>{
+    const data = await Coms.findOne({Community: req.params.id})
     res.status(200).json(data);
 })
 

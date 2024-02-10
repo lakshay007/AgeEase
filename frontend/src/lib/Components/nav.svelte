@@ -29,12 +29,12 @@
    </div>
    <div class="navbar-center hidden lg:flex">
      <ul class="menu menu-horizontal px-1">
-       <li><a>Community</a></li>
+       <li><a href = '/community'>Community</a></li>
        <li>
          <details>
            <summary>Profile</summary>
            <ul class="p-2">
-             <li><a href = '/homepage/lawyerprofile' >My profile</a></li>
+             <li><a href = '/homepage' >My profile</a></li>
              <li><a on:click={handlesignout}>Sign out</a></li>
            </ul>
          </details>
