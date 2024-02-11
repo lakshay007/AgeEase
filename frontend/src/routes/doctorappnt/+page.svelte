@@ -1,4 +1,5 @@
 <script>
+    import Nav from '$lib/Components/roundednav.svelte'
     import "../../app.css";
     let name = '';
   let doctor = 'Dr. Smith'; // Default value
@@ -16,8 +17,9 @@
     time = '';
   }
 </script>
-<main>
-    <div class="container mx-auto p-4 flex flex-col justify-center">
+<main class="h-full w-full">
+  <Nav class="rounded-3xl" />
+    <div class="flex flex-col justify-center p-14">
         <h1 class="text-3xl font-bold mb-4 self-center text-center">Virtual Doctor Appointments Booking</h1>
         <form on:submit={handleSubmit} class="space-y-4 flex flex-col justify-center">
           <div>

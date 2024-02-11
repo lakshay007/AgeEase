@@ -1,4 +1,5 @@
 <script>
+    import Nav from '$lib/Components/roundednav.svelte'
     import '../../app.css'
     import { onMount } from 'svelte';
     import OpenAI from 'openai';
@@ -74,6 +75,7 @@
 </script>
 
 <main>
+    <Nav class="rounded-3xl" />
     <div class="flex flex-col justify-center items-center gap-y-5">
         <div class="text-5xl">Companion Care</div>
         <input bind:value={question} type="text" placeholder="Type here" class="input input-bordered input-black w-[25vw]"/>
