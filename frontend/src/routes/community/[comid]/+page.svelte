@@ -1,4 +1,5 @@
 <script>
+    import "../../../app.css";
     let API_URL = "http://localhost:3000/"
     import { onMount } from 'svelte';
 import {page} from'$app/stores'
@@ -15,12 +16,20 @@ onMount(async () => {
 	});
 </script>
 <main>
-<Nav>
-</Nav>
-{#each Posts as posts}
-<h1>{posts.Title}</h1>
-<h2>{posts.Description}</h2>
-{/each}
+    <Nav />
+    <div class='flex'>
+        {#each Posts as post}
+            <h1 class="text-3xl">Title</h1>
+            <h1 class="text-2xl">{post.Title}</h1>
+            <h1 class="text-3xl">Description</h1>
+            <h2 class="">{post.Description}</h2>
+            <h1 class="text-3xl">Comments</h1>
+            {#each post.Comments as comment (comment._id)}
+                <h3 class="">{comment.Comment}</h3>
+            {/each}
+        {/each}
+    </div>
 </main>
+
 <style>
 </style>
