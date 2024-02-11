@@ -58,9 +58,9 @@ let handlelogin = async()=>{
 }
 </script>
 <main class="flex flex-row grow h-full w-full justify-around items-center rounded-3xl">
-    <div class=" grow h-full w-1/2 flex flex-col justify-center items-center gap-y-10 bg-[#eeeeee]">
+    <div class=" grow h-full w-1/2 flex flex-col justify-center items-center gap-y-10 bg-[#eeeeee] rounded-l-3xl">
         <div class="text-4xl font-semibold">
-            LOGIN
+            REGISTER
         </div>
         <div class="flex flex-col gap-y-2.5">
             <p class="label-text text-base">Username</p>
@@ -70,7 +70,7 @@ let handlelogin = async()=>{
             <p class="label-text text-base">Password </p>
             <input bind:value={passwordd} type="text" placeholder="Type here" class="input input-bordered input-black w-[25vw] "/>
         </div>
-        <button on:click={handlelogin} class="btn btn-primary w-[25vw] bg-[#2f4159] text-white border-0"> SIGN IN </button>
+        <button on:click={handleSubmit} class="btn btn-primary w-[25vw] bg-[#2f4159] text-white border-0"> SIGN UP </button>
         <div>
             {#if useralready == 1}
             
@@ -88,6 +88,6 @@ let handlelogin = async()=>{
         </div>
     </div>
     <div class="grow h-full w-1/2 flex justify-center items-center rounded-r-2xl bg-white ">
-        <img src="/src/assets/health-doctor-vaccine.png" />
+        <img src="/src/assets/health-vaccine-row.png" />
     </div>
 </main>
