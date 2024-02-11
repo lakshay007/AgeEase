@@ -39,7 +39,8 @@
            </ul>
          </details>
        </li>
-       <li><a>Help</a></li>
+       <li><a href = '/medicinetracker'>Medicine Tracker</a></li>
+       <li><a>Virtual Doctor Appointment</a></li>
      </ul>
    </div>
    <div class="navbar-end">
