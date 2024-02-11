@@ -1,4 +1,7 @@
 <script>
+   let Title
+    let Description
+    let data
     import "../../../app.css";
     let API_URL = "http://localhost:3000/"
     import { onMount } from 'svelte';
@@ -7,6 +10,20 @@ import Nav from '$lib/Components/roundednav.svelte'
 let Posts = []
 const com = $page.params.comid
 //console.log(JSON.parse(data[0]))
+const handlePost = async()=>{
+        data = {
+            "Title":Title,
+            "Description":Description,
+            "User":localStorage.getItem("username")
+        }
+        console.log(data);
+        const response = await fetch(API_URL+"Communities/"+com,{
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json' }
+});
+window.location.reload()
+    }
 onMount(async () => {
     const check = await fetch(API_URL + "Communities/" + com)
     let ans = await check.json();
@@ -17,7 +34,13 @@ onMount(async () => {
 </script>
 <main class="h-full w-full flex flex-col">
     <Nav />
+  
     <div class='flex flex-col h-full items-center bg-[#eeeeee] p-3 px-5 gap-4 overflow-y-scroll rounded-b-3xl'>
+      <div class="flex flex-col gap-y-2.5">
+        <input bind:value={Title} type="text" placeholder="Title" class="input input-bordered input-black w-[25vw]"/>
+        <input bind:value={Description} type="text" placeholder="Description" class="input input-bordered input-black w-[25vw]"/>
+        <button on:click={handlePost} class="btn btn-primary w-[25vw] bg-[#2f4159] text-white border-0">Post</button>
+    </div>
         {#each Posts as post}
             <div class="card w-full bg-base-100 shadow-xl ">
                 <div class="card-body">
