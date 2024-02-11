@@ -2,14 +2,15 @@
     import '../../app.css'
     import { onMount } from 'svelte';
     import OpenAI from 'openai';
-    
+    let recognition
     let transcript;
     let vc;
     let handlehelp;
     let question = '';
     let speech;
-    
+    let res
     onMount(async () => {
+        document.getElementById("p").style.display = "none";
         try {
             const openai = new OpenAI({
                 apiKey: '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',
@@ -17,6 +18,7 @@
             });
             
             handlehelp = async () => {
+                recognition.abort()
                 speech = false;
                 question = transcript;
                 
@@ -25,7 +27,7 @@
                     model: "gpt-3.5-turbo",
                     messages: [{"role": "user", "content": question}],
                 });
-                
+                res = chatCompletion.choices[0].message
                 console.log(chatCompletion.choices[0].message);
             }
         } catch (er) {
@@ -35,7 +37,7 @@
         vc = () => {
             speech = true;
             window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-            const recognition = new SpeechRecognition();
+             recognition = new SpeechRecognition();
             recognition.interimResults = true;
             const words = document.querySelector('.words');
             const p = document.getElementById("p");
@@ -49,6 +51,7 @@
                     .join('');
                 
                 p.innerHTML = transcript;
+                question = transcript
                 console.log(transcript);
             });
             
@@ -73,6 +76,9 @@
     </div>
     <div class="words" contenteditable>
         <p id="p"></p>
+        {#if res} 
+        <p> {res.content} </p>
+        {/if}
     </div>
 </main>
 
