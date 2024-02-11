@@ -22,7 +22,7 @@
 
         var list = document.getElementById("medicineList");
         var listItem = document.createElement("li");
-        listItem.classList.add("bg-white", "rounded-md", "shadow-md", "p-4", "mb-2", "flex", "items-center", "justify-between");
+        listItem.classList.add("bg-white", "rounded-md", "shadow-md", "p-4", "mb-2", "flex", "items-center", "justify-between", "gap-2");
         var checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.onclick = function() {
@@ -48,26 +48,29 @@
     });
 </script>
 
-<main>
-   
-
-    <div class="container mx-auto p-4">
-        <Nav>
-        </Nav>
-        <h1 class="text-3xl font-bold mb-4">Medicine Tracker</h1>
-        <div class="mb-4">
-            <label for="medicineName" class="block font-semibold">Medicine Name:</label>
-            <input type="text" id="medicineName" class="w-full rounded-md p-2 border border-gray-300 focus:outline-none focus:border-blue-500">
-        </div>
-        <div class="mb-4">
-            <label for="medicineTime" class="block font-semibold">Time:</label>
-            <div id="medicineTimeWrapper" class="w-full rounded-md p-2 border border-gray-300 focus:outline-none focus:border-blue-500">
-                <input bind:value={timeInput} type="time" id="medicineTime" class="w-full bg-transparent">
+<main class="h-full w-full flex flex-col bg-[#eeeeee] rounded-3xl">
+    <Nav class="border-gray-300 border-4">
+    </Nav>
+    <div class="grow h-full rounded-b-3xl flex flex-row justify-around items-center">
+        <div class="grow h-full w-1/2 rounded-b-3xl p-5 flex flex-col gap-3 justify-center items-center">
+            <h1 class="text-3xl font-bold mb-4">Medicine Tracker</h1>
+            <div class="mb-4 flex flex-col gap-2 w-[20vw]">
+                <label for="medicineName" class="block font-semibold">Medicine Name</label>
+                <input type="text" id="medicineName" class="w-full rounded-md p-2 border border-gray-300 focus:outline-none focus:border-blue-500">
             </div>
+            <div class="mb-4 flex flex-col gap-2 w-[20vw]">
+                <label for="medicineTime" class="block font-semibold">Time</label>
+                <div id="medicineTimeWrapper" class="w-full rounded-md p-2 border bg-white border-gray-300 focus:outline-none focus:border-blue-500">
+                    <input bind:value={timeInput} type="time" id="medicineTime" class="w-full bg-transparent">
+                </div>
+            </div>
+            <button on:click={addMedicine} class="btn btn-primary w-[20vw] bg-[#2f4159] text-white border-0 px-4 py-2 rounded-md">Add Medicine</button>
+            <ul id="medicineList" class="mt-4">
+            </ul>
         </div>
-        <button on:click={addMedicine} class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">Add Medicine</button>
-        <ul id="medicineList" class="mt-4">
-        </ul>
+        <div class="grow h-full flex items-center justify-center w-1/2 bg-white">
+            <img src="/src/assets/health-solution.png" alt="" />
+        </div>
     </div>
 </main>
 

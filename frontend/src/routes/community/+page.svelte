@@ -15,7 +15,7 @@
 <main class="h-full w-full flex flex-col">
  <Nav class="rounded-3xl">
  </Nav>
- <div class="grow flex flex-col justify-center items-center bg-[#eeeeee] gap-10">
+ <div class="grow flex flex-col justify-center items-center bg-[#eeeeee] gap-10 rounded-b-3xl">
     <p class="text-5xl">Your Communities</p>
     <div class="flex flex-row flex-wrap justify-center items-center gap-3">
       <a href = "http://localhost:5173/community/Hinduism" class="card w-48 bg-base-100 shadow-xl">

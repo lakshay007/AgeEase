@@ -17,7 +17,7 @@ onMount(async () => {
 </script>
 <main class="h-full w-full flex flex-col">
     <Nav />
-    <div class='flex flex-col items-center bg-[#eeeeee] p-3 px-5 gap-4 overflow-y-scroll'>
+    <div class='flex flex-col h-full items-center bg-[#eeeeee] p-3 px-5 gap-4 overflow-y-scroll rounded-b-3xl'>
         {#each Posts as post}
             <div class="card w-full bg-base-100 shadow-xl ">
                 <div class="card-body">

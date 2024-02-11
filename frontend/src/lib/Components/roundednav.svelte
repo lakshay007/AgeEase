@@ -36,7 +36,7 @@
      <li>
        <details>
          <summary>Profile</summary>
-         <ul class="p-2">
+         <ul class="p-2 w-[10vw]">
            <li><a href = '/homepage' >My profile</a></li>
            <li><a on:click={handlesignout}>Sign out</a></li>
          </ul>
