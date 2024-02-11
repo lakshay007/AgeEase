@@ -44,7 +44,7 @@
        </li>
      </ul>
    </div>
-   <div id = "google_translate_element"></div>
+   <div id = "google_translate_element" class="flex flex-row justify-center items-center"></div>
   <script src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
    function googleTranslateElementInit(){

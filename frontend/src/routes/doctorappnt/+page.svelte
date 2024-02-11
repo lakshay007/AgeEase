@@ -17,9 +17,10 @@
     time = '';
   }
 </script>
-<main class="h-full w-full">
+<main class="h-full w-full flex flex-col rounded-3xl">
   <Nav class="rounded-3xl" />
-    <div class="flex flex-col justify-center p-14">
+  <div class="grow h-full rounded-b-3xl flex flex-row justify-around items-center">
+      <div class="w-1/2 flex flex-col justify-center p-14">
         <h1 class="text-3xl font-bold mb-4 self-center text-center">Virtual Doctor Appointments Booking</h1>
         <form on:submit={handleSubmit} class="space-y-4 flex flex-col justify-center">
           <div>
@@ -47,6 +48,11 @@
         {#if confirmationMessage!=''}
         <div class="mt-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md">{confirmationMessage}</div>
         {/if}
+      </div>
+      <div class="grow w-1/2 h-full rounded-r-xl bg-white">
+        <img src="/src/assets/health-sick.png" />
+      </div>
+    </div>
 </main>
 <style>
 </style>
