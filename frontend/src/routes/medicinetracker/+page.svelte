@@ -1,7 +1,7 @@
 <script>
     import "../../app.css";
     import { onMount } from 'svelte';
-    
+    import Nav from '$lib/Components/nav.svelte'
     let timeInput = "";
 
     const handleTimeChange = () => {
@@ -49,7 +49,11 @@
 </script>
 
 <main>
+   
+
     <div class="container mx-auto p-4">
+        <Nav>
+        </Nav>
         <h1 class="text-3xl font-bold mb-4">Medicine Tracker</h1>
         <div class="mb-4">
             <label for="medicineName" class="block font-semibold">Medicine Name:</label>
