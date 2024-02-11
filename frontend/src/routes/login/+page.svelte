@@ -68,7 +68,7 @@ let handlelogin = async()=>{
         </div>
         <div class=" flex flex-col gap-y-2.5">
             <p class="label-text text-base">Password </p>
-            <input bind:value={passwordd} type="text" placeholder="Type here" class="input input-bordered input-black w-[25vw] "/>
+            <input bind:value={passwordd} type="password" placeholder="Type here" class="input input-bordered input-black w-[25vw] "/>
         </div>
         <button on:click={handlelogin} class="btn btn-primary w-[25vw] bg-[#2f4159] text-white border-0"> SIGN IN </button>
         <div>

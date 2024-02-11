@@ -25,7 +25,7 @@
        <li><a>Dashboard</a></li>
      </ul>
    </div>
-   <a href='/homepage' class="btn btn-ghost text-xl">AgEase</a>
+   <a href='/homepage' class="btn btn-ghost text-xl">AgeEase</a>
  </div>
  <div class="navbar-center hidden lg:flex">
    <ul class="menu menu-horizontal px-1">
