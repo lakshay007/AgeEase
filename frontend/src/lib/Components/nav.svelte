@@ -25,7 +25,7 @@
          <li><a>Dashboard</a></li>
        </ul>
      </div>
-     <a class="btn btn-ghost text-xl">Elderly Help</a>
+     <a href = '/homepage' class="btn btn-ghost text-xl">Elderly Help</a>
    </div>
    <div class="navbar-center hidden lg:flex">
      <ul class="menu menu-horizontal px-1">
@@ -41,6 +41,7 @@
        </li>
        <li><a href = '/medicinetracker'>Medicine Tracker</a></li>
        <li><a>Virtual Doctor Appointment</a></li>
+       <li><a href = '/help'>Chatbot help</a></li>
      </ul>
    </div>
    <div class="navbar-end">
