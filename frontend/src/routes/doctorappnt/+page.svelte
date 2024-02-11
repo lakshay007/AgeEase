@@ -17,9 +17,9 @@
   }
 </script>
 <main>
-    <div class="container mx-auto p-4">
-        <h1 class="text-3xl font-bold mb-4">Virtual Doctor Appointments Booking</h1>
-        <form on:submit={handleSubmit} class="space-y-4">
+    <div class="container mx-auto p-4 flex flex-col justify-center">
+        <h1 class="text-3xl font-bold mb-4 self-center text-center">Virtual Doctor Appointments Booking</h1>
+        <form on:submit={handleSubmit} class="space-y-4 flex flex-col justify-center">
           <div>
             <label for="name" class="block font-semibold">Your Name:</label>
             <input type="text" id="name" bind:value={name} class="w-full rounded-md p-2 border border-gray-300 focus:outline-none focus:border-blue-500">
@@ -40,7 +40,7 @@
             <label for="time" class="block font-semibold">Time:</label>
             <input type="time" id="time" bind:value={time} class="w-full rounded-md p-2 border border-gray-300 focus:outline-none focus:border-blue-500">
           </div>
-          <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">Book Appointment</button>
+          <button type="submit" class="text-white px-4 py-2 rounded-md btn btn-primary w-[20vw] bg-[#2f4159] self-center border-0 ">Book Appointment</button>
         </form>
         {#if confirmationMessage!=''}
         <div class="mt-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md">{confirmationMessage}</div>

@@ -36,11 +36,14 @@ onMount(async () => {
     <Nav />
   
     <div class='flex flex-col h-full items-center bg-[#eeeeee] p-3 px-5 gap-4 overflow-y-scroll rounded-b-3xl'>
-      <div class="flex flex-col gap-y-2.5">
-        <input bind:value={Title} type="text" placeholder="Title" class="input input-bordered input-black w-[25vw]"/>
-        <input bind:value={Description} type="text" placeholder="Description" class="input input-bordered input-black w-[25vw]"/>
-        <button on:click={handlePost} class="btn btn-primary w-[25vw] bg-[#2f4159] text-white border-0">Post</button>
-    </div>
+    <div class="card w-full bg-base-100 shadow-xl">
+        <div class="card-body">
+        <p class="text-2xl">Create Post</p>
+        <input bind:value={Title} type="text" placeholder="Title" class="input input-bordered input-black w-full"/>
+        <input bind:value={Description} type="text" placeholder="Description" class="input input-bordered input-black w-full"/>
+        <button on:click={handlePost} class="btn btn-primary w-[25vw] bg-[#2f4159] text-white border-0 self-end">Post</button>
+        </div>
+      </div>
         {#each Posts as post}
             <div class="card w-full bg-base-100 shadow-xl ">
                 <div class="card-body">
