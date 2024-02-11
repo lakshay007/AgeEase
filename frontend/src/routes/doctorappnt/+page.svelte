@@ -49,7 +49,7 @@
         <div class="mt-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md">{confirmationMessage}</div>
         {/if}
       </div>
-      <div class="grow w-1/2 h-full rounded-r-xl bg-white">
+      <div class="grow w-1/2 h-full rounded-r-xl flex justify-center items-center bg-white">
         <img src="/src/assets/health-sick.png" />
       </div>
     </div>
