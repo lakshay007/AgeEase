@@ -1,5 +1,5 @@
 <script>
-   import Nav from '$lib/Components/nav.svelte';
+   import Nav from '$lib/Components/roundednav.svelte';
       import { onMount } from 'svelte';
       let username;
       let notfound = 0;
@@ -16,10 +16,10 @@
 
     }
   </script>
-  <main class="grow rounded-3xl h-full flex flex-col justify-center">
+  <main class="grow rounded-3xl h-full flex flex-col justify-center bg-[#eeeeee]">
      <Nav class="rounded-t-3xl">
      </Nav>
-   <div class="grow flex flex-col justify-center items-center w-full bg-[#eeeeee] rounded-b-3xl gap-10">
+   <div class="grow flex flex-col justify-center items-center w-full rounded-b-3xl gap-10">
       <div class="text-center w-full pl-[3vw] text-4xl">
          {#if notfound == 0}
          <p>Welcome {username}</p>

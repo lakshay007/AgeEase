@@ -1,7 +1,7 @@
 <script>
     import "../../app.css";
     import { onMount } from 'svelte';
-    import Nav from '$lib/Components/nav.svelte'
+    import Nav from '$lib/Components/roundednav.svelte'
     let timeInput = "";
 
     const handleTimeChange = () => {
