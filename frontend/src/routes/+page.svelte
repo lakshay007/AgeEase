@@ -1,5 +1,5 @@
 <script>
-import "../app.css";
+import SuccessAlert from '$lib/Components/SuccessAlert.svelte'
 let API_URL = "http://localhost:3000/"
 let useralready = 0;
 let usersuccess = 0;
@@ -76,13 +76,16 @@ let handlelogin = async()=>{
     <button on:click={handleSubmit} class="btn btn-outline btn-white" >SignUp</button>
     {#if useralready == 1}
     <h1>username is already in use</h1>
+    <SuccessAlert message="username is already in use" />
     {/if}
     {#if usersuccess == 1}
     <h1>user successfully created,redirecting to homepage</h1>
     {/if}
     {#if passwordauth == -1}
     <p>wrong password, please try again</p>
-   
+    <SuccessAlert>
+        hello world
+    </SuccessAlert>
     {:else if passwordauth == -2}
     <p>user is not registered, please sign up</p>
     {/if}
