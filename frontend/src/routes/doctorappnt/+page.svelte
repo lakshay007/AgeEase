@@ -45,7 +45,7 @@
           </div>
           <button type="submit" class="text-white px-4 py-2 rounded-md btn btn-primary w-[20vw] bg-[#2f4159] self-center border-0 ">Book Appointment</button>
         </form>
-        {#if confirmationMessage!=''}
+        {#if confirmationMessage != ''}
         <div class="mt-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md">{confirmationMessage}</div>
         {/if}
       </div>

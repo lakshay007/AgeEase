@@ -8,6 +8,8 @@
         timeInput = document.getElementById("medicineTime").value;
     };
 
+    let selectflag;
+
     // Define addMedicine function outside onMount
     const addMedicine = () => {
         var nameInput = document.getElementById("medicineName");
@@ -39,6 +41,11 @@
         timeInput = ""; // Reset timeInput
     };
 
+
+    const selectchange = () => {
+
+    }
+
     // onMount callback
     onMount(() => {
         document.getElementById("medicineTime").addEventListener("change", handleTimeChange);
@@ -68,12 +75,13 @@
                 <div class="label">
                   <span class="label-text">Pick Reminder</span>
                 </div>
-                <select class="select select-bordered">
+                <select bind:value={selectflag} class="select select-bordered">
                   <option disabled selected>Pick one</option>
                   <option>Daily</option>
                   <option>Weekly</option>
                 </select>
               </label>
+            {#if selectflag === "Weekly"}
             <div class="flex flex-row gap-4 items-center">
                 <div class="form-control">
                     <label class="label cursor-pointer flex flex-col justify-center items-center">
@@ -119,6 +127,7 @@
                 </div>
 
             </div>
+            {/if}
             <button on:click={addMedicine} class="btn btn-primary w-[20vw] bg-[#2f4159] text-white border-0 px-4 py-2 rounded-md">Add Medicine</button>
             <ul id="medicineList" class="mt-4">
             </ul>
