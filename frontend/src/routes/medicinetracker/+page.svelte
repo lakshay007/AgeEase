@@ -64,6 +64,61 @@
                     <input bind:value={timeInput} type="time" id="medicineTime" class="w-full bg-transparent">
                 </div>
             </div>
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                  <span class="label-text">Pick Reminder</span>
+                </div>
+                <select class="select select-bordered">
+                  <option disabled selected>Pick one</option>
+                  <option>Daily</option>
+                  <option>Weekly</option>
+                </select>
+              </label>
+            <div class="flex flex-row gap-4 items-center">
+                <div class="form-control">
+                    <label class="label cursor-pointer flex flex-col justify-center items-center">
+                      <span class="label-text">Mon</span> 
+                      <input type="checkbox" checked="checked" class="checkbox" />
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label class="label cursor-pointer flex flex-col justify-center items-center">
+                      <span class="label-text">Tue</span> 
+                      <input type="checkbox" checked="checked" class="checkbox" />
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label class="label cursor-pointer flex flex-col justify-center items-center">
+                      <span class="label-text">Wed</span> 
+                      <input type="checkbox" checked="checked" class="checkbox" />
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label class="label cursor-pointer flex flex-col justify-center items-center">
+                      <span class="label-text">Thu</span> 
+                      <input type="checkbox" checked="checked" class="checkbox" />
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label class="label cursor-pointer flex flex-col justify-center items-center">
+                      <span class="label-text">Fri</span> 
+                      <input type="checkbox" checked="checked" class="checkbox" />
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label class="label cursor-pointer flex flex-col justify-center items-center">
+                      <span class="label-text">Sat</span> 
+                      <input type="checkbox" checked="checked" class="checkbox" />
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label class="label cursor-pointer flex flex-col justify-center items-center">
+                      <span class="label-text">Sun</span> 
+                      <input type="checkbox" checked="checked" class="checkbox" />
+                    </label>
+                </div>
+
+            </div>
             <button on:click={addMedicine} class="btn btn-primary w-[20vw] bg-[#2f4159] text-white border-0 px-4 py-2 rounded-md">Add Medicine</button>
             <ul id="medicineList" class="mt-4">
             </ul>
