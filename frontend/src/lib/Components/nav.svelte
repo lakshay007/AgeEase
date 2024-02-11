@@ -31,7 +31,7 @@
      <ul class="menu menu-horizontal px-1">
        <li><a href = '/community'>Community</a></li>
        <li><a href = '/medicinetracker'>Medicine Tracker</a></li>
-       <li><a>Virtual Doctor Appointment</a></li>
+       <li><a href = '/doctorappnt'>Virtual Doctor Appointment</a></li>
        <li><a href = '/help'>Chatbot help</a></li>
        <li>
          <details>

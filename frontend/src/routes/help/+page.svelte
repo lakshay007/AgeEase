@@ -8,7 +8,8 @@
     let handlehelp;
     let question = '';
     let speech;
-    let res
+    let res ;
+    let loaded
     onMount(async () => {
         document.getElementById("p").style.display = "none";
         try {
@@ -18,6 +19,8 @@
             });
             
             handlehelp = async () => {
+                loaded = false
+               
                 recognition.abort()
                 speech = false;
                 question = transcript;
@@ -29,12 +32,14 @@
                 });
                 res = chatCompletion.choices[0].message
                 console.log(chatCompletion.choices[0].message);
+                loaded = true
             }
         } catch (er) {
             console.log(er);
         }
         
         vc = () => {
+         
             speech = true;
             window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
              recognition = new SpeechRecognition();
@@ -76,9 +81,14 @@
     </div>
     <div class="words" contenteditable>
         <p id="p"></p>
-        {#if res} 
+
+        {#if loaded} 
         <p> {res.content} </p>
+        {:else if loaded === false}
+        <h1>loading</h1>
+        {:else}
         {/if}
+
     </div>
 </main>
 
