@@ -6,6 +6,26 @@
 
  }
  </script>
+ <style>
+  :global(#google_translate_element) {
+    color: transparent;
+    
+  }
+  :global(#google_translate_element a)  {
+  display: none;
+}
+/* :global(#google_translate_element.goog-te-gadget)  {
+  color: transparent; !important
+} */
+:global(div.goog-te-gadget) {
+  margin-top:10%;
+    color: transparent !important;
+  }
+  :global(.goog-te-gadget .goog-te-combo) {
+   
+   color: black !important;
+}
+</style>
 <main>
 <div class="navbar bg-base-100 px-10 rounded-t-3xl">
  <div class="navbar-start">
@@ -46,7 +66,7 @@
  </div>
  <div class="navbar-end">
   <div id = "google_translate_element"></div>
-  <script src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" class="flex flex-row"></script>
+  <script async src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" class="flex flex-row"></script>
   <script>
    function googleTranslateElementInit(){
      new google.translate.TranslateElement(
