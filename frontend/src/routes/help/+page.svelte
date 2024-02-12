@@ -1,4 +1,5 @@
 <script>
+    import { PUBLIC_API_KEY } from '$env/static/public'
     import Nav from '$lib/Components/roundednav.svelte'
     import '../../app.css'
     import { onMount } from 'svelte';
@@ -15,7 +16,7 @@
         document.getElementById("p").style.display = "none";
         try {
             const openai = new OpenAI({
-                apiKey: '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',
+                apiKey: PUBLIC_API_KEY,
                 dangerouslyAllowBrowser: true // This is also the default, can be omitted
             });
             
