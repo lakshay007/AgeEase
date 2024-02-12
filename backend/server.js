@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -6,7 +7,7 @@ const UserData = require('./userSchema');
 const Coms = require('./postSchema');
 app.use(express.json());
 app.use(cors());
-mongoose.connect('mongodb+srv://lakshay:kaalajaadu123@istehackathon.wpmeatj.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(process.env.API_URL)
 .then(()=>{
     console.log("connected to mongodb")
     app.listen(3000, ()=>{
