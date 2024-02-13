@@ -28,6 +28,6 @@ To use AgeEase, follow these steps:
 
    ```bash
    git clone https://github.com/lakshay007/AgeEase.git
-2. cd AgeEasE  
-   npm install  
+2. ```cd AgeEase ```    
+   ```npm install```     
 3. Use ```npm run dev``` to run the frontend and backend
