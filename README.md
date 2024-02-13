@@ -4,13 +4,14 @@ Welcome to AgeEase, a web application designed to cater to the needs of elderly 
 
 ## Features
 
-### 1. Medicine Reminder
 
-AgeEase helps users manage their medication by providing a convenient medicine reminder feature. Users can set up reminders for different medications and dosages, ensuring they never miss an important pill.
-
-### 2. Community   
+### 1. Community   
 
 Join our vibrant community where users can share experiences, ask questions, and connect with others. It's a space tailored for elderly individuals to foster a supportive environment similar to popular community platforms like Reddit.
+
+### 2. Medicine Reminder
+
+AgeEase helps users manage their medication by providing a convenient medicine reminder feature. Users can set up reminders for different medications and dosages, ensuring they never miss an important pill.
 
 ### 3. Voice Chatbot
 
