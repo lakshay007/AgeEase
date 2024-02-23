@@ -1,4 +1,5 @@
 <script>
+    let loginloading = 0;
     import {PUBLIC_API_URL} from '$env/static/public';
     let API_URL = PUBLIC_API_URL;
 let useralready = 0;
@@ -35,6 +36,8 @@ window.location.href = '/homepage'
   console.log(dataaa);
 }
 let handlelogin = async()=>{
+    loginloading = 1;
+
     const data = {
         username: uusername,
         password: passwordd
@@ -55,6 +58,7 @@ let handlelogin = async()=>{
     else{
         passwordauth = -1;
     }
+    
 
 }
 </script>
@@ -72,6 +76,9 @@ let handlelogin = async()=>{
             <input bind:value={passwordd} type="password" placeholder="Type here" class="input input-bordered input-black w-[25vw] "/>
         </div>
         <button on:click={handlelogin} class="btn btn-primary w-[25vw] bg-[#2f4159] text-white border-0"> SIGN IN </button>
+        {#if loginloading == 1}
+        <span class="loading loading-spinner loading-lg"></span>
+        {/if}
         <div>
             {#if useralready == 1}
             
