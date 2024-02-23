@@ -1,5 +1,6 @@
 <script>
-    let API_URL = "http://localhost:3000/"
+    import {PUBLIC_API_URL} from '$env/static/public';
+    let API_URL = PUBLIC_API_URL;
 let useralready = 0;
 let usersuccess = 0;
 let passwordauth = 0;

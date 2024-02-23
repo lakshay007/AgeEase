@@ -1,5 +1,7 @@
 <script>
    import Nav from '$lib/Components/roundednav.svelte';
+   import {PUBLIC_API_URL} from '$env/static/public';
+    let API_URL = PUBLIC_API_URL;
       import { onMount } from 'svelte';
       let username;
       let notfound = 0;
@@ -12,7 +14,7 @@
       });
       let handlesignout = async()=>{
         localStorage.removeItem("username");
-        window.location.href = 'http://localhost:5173/'
+        window.location.href = API_URL
 
     }
   </script>

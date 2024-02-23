@@ -9,7 +9,8 @@
   let commentpost;
   let comdata;
   import "../../../app.css";
-  let API_URL = "http://localhost:3000/";
+  import {PUBLIC_API_URL} from '$env/static/public';
+    let API_URL = PUBLIC_API_URL;
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
   import Nav from '$lib/Components/roundednav.svelte';
