@@ -7,6 +7,7 @@ const UserData = require('./userSchema');
 const Coms = require('./postSchema');
 app.use(express.json());
 app.use(cors());
+const PORT = process.env.PORT || 3000;
 mongoose.connect(process.env.API_URL)
 .then(()=>{
     console.log("connected to mongodb")
