@@ -55,4 +55,29 @@ app.get('/communities/:id', async(req,res)=>{
     const data = await Coms.findOne({Community: req.params.id})
     res.status(200).json(data);
 })
+app.post('/communities/:id/:post/comments', async (req, res) => {
+    try {
+        const community = await Coms.findOne({ Community: req.params.id });
+
+        if (community) {
+            const postId = req.params.post;
+            const post = community.Posts.find(post => post._id == postId);
+
+            if (post) {
+                post.Comments.push(req.body);
+                await community.save();
+
+                res.status(200).json(community);
+            } else {
+                res.status(404).json({ message: 'Post not found' });
+            }
+        } else {
+            res.status(404).json({ message: 'Community not found' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
+
 
