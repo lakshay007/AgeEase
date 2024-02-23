@@ -50,7 +50,7 @@
         {/if}
       </div>
       <div class="grow w-1/2 h-full rounded-r-xl flex justify-center items-center bg-white">
-        <img src="/src/assets/health-sick.png" />
+        <img src="/health-sick.png" />
       </div>
     </div>
 </main>

@@ -133,7 +133,7 @@
             </ul>
         </div>
         <div class="grow h-full flex items-center justify-center w-1/2 bg-white">
-            <img src="/src/assets/health-solution.png" alt="" />
+            <img src="/health-solution.png" alt="" />
         </div>
     </div>
 </main>

@@ -104,7 +104,7 @@
                 </div>
         </div>
         <div class="grow h-full flex items-center justify-center w-1/2 bg-white rounded-br-3xl">
-            <img src="/src/assets/health-elderly.png" alt="" />
+            <img src="/health-elderly.png" alt="" />
         </div>
     </div>
 </main>

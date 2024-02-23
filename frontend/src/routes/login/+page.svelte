@@ -89,6 +89,6 @@ let handlelogin = async()=>{
         </div>
     </div>
     <div class="grow h-full w-1/2 flex justify-center items-center rounded-r-2xl bg-white ">
-        <img src="/src/assets/health-doctor-vaccine.png" />
+        <img src="/health-doctor-vaccine.png" />
     </div>
 </main>
