@@ -2,7 +2,7 @@
   import '../../app.css'
   let handlesignout = async()=>{
      localStorage.removeItem("username");
-     window.location.href = 'http://localhost:5173/'
+     window.location.href = '/login'
 
  }
  </script>
