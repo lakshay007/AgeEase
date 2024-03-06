@@ -22,17 +22,16 @@
             
             handlehelp = async () => {
                 loaded = false
-               
-                recognition.abort()
+                
                 speech = false;
-                question = transcript;
+                
                 
                 
                 const chatCompletion = await openai.chat.completions.create({
                     model: "gpt-3.5-turbo",
                     messages: [{"role": "user", "content": question}],
                 });
-                res = chatCompletion.choices[0].message
+                res = await chatCompletion.choices[0].message
                 console.log(chatCompletion.choices[0].message);
                 loaded = true
             }
