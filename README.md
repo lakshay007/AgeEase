@@ -1,6 +1,6 @@
 # AgeEase Web App
 
-Welcome to AgeEase, a web application designed to cater to the needs of elderly individuals, providing features that enhance their daily lives. AgeEase focuses on medicine reminders, community engagement, a voice chatbot, and virtual doctor appointments.
+Welcome to AgeEase, a web application designed to cater to the needs of elderly individuals, providing features that enhance their daily lives. AgeEase focuses on medicine reminders,  community engagement, a voice chatbot, and virtual doctor appointments.
 
 ## Features
 
